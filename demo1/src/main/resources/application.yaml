@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  flyway:
+    schemas:
+      - public
+      - list
+  security:
+    user:
+      name: Superuser
+      password: admin
+      roles:
+        - ADMIN
+
+server:
+  port: ${SERVER_PORT}
+
+logging:
+  level:
+    sql: info

@@ -1,0 +1,7 @@
+CREATE SCHEMA IF NOT EXISTS list;
+CREATE TABLE IF NOT EXISTS list.t_products(
+    id SERIAL PRIMARY KEY,
+    c_name VARCHAR(50) NOT NULL,
+    c_count INT NOT NULL,
+    c_price REAL NOT NULL
+)
