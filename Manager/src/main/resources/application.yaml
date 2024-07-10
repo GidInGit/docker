@@ -19,6 +19,6 @@ logging:
 users:
   service:
     list:
-      uri: "http://192.168.1.67:8081"
+      uri: "http://192.168.1.55:8081"
     username: Superuser
     password: admin
