@@ -26,14 +26,6 @@ services:
       - SERVER_PORT=8081
       - SPRING_DATASOURCE_URL=jdbc:postgresql://my-database/postgres
 
-  testapi-backend:
-    image: test-rest-image:0.0.1
-    build:
-      context: ./test
-      dockerfile: Dockerfile
-    ports:
-      - "8082:8082"
-
   my-database:
     image: postgres:14.7-alpine
     environment:
