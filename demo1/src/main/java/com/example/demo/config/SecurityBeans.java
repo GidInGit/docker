@@ -13,7 +13,7 @@ public class SecurityBeans {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(authorizeHttpRequests ->
-                        authorizeHttpRequests.requestMatchers("/users-api/**", "/products-api/**", "/test-api/**")
+                        authorizeHttpRequests.requestMatchers("/users-api/**", "/products-api/**")
                                 .hasRole("ADMIN"))
                 .httpBasic(Customizer.withDefaults())
                 .csrf().disable()
